@@ -5,7 +5,7 @@ import javax.naming.ConfigurationException;
 import org.apache.log4j.Logger;
 import org.bson.Document;
 
-import com.apu.news.util.NewsConstatns;
+import com.apu.news.util.NewsConstants;
 import com.apu.news.util.PropUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
@@ -83,16 +83,16 @@ public class DAOFactory {
 	 */
 	private static void getMongoClientInstance() throws ConfigurationException {
 
-		System.setProperty(PropUtil.newsProps.getProperty(NewsConstatns.JAVA_SSL_PATH_PROP),
-				PropUtil.newsProps.getProperty(NewsConstatns.JAVA_SSL_PATH_VAL));
-		System.setProperty(PropUtil.newsProps.getProperty(NewsConstatns.JAVA_SSL_PWD_PROP),
-				PropUtil.newsProps.getProperty(NewsConstatns.JAVA_SSL_PWD_VAL));
+		System.setProperty(PropUtil.newsProps.getProperty(NewsConstants.JAVA_SSL_PATH_PROP),
+				PropUtil.newsProps.getProperty(NewsConstants.JAVA_SSL_PATH_VAL));
+		System.setProperty(PropUtil.newsProps.getProperty(NewsConstants.JAVA_SSL_PWD_PROP),
+				PropUtil.newsProps.getProperty(NewsConstants.JAVA_SSL_PWD_VAL));
 		
-		if(PropUtil.newsProps.containsKey(NewsConstatns.MONGO_URI)){
-			String url = PropUtil.newsProps.getProperty(NewsConstatns.MONGO_URI);
+		if(PropUtil.newsProps.containsKey(NewsConstants.MONGO_URI)){
+			String url = PropUtil.newsProps.getProperty(NewsConstants.MONGO_URI);
 			mongoClient = new MongoClient(new MongoClientURI(url));
 		} else {
-			throw new ConfigurationException(NewsConstatns.MONGO_URI+" is not availble.");
+			throw new ConfigurationException(NewsConstants.MONGO_URI+" is not availble.");
 		}
 		
 	}

@@ -1,6 +1,6 @@
 package com.apu.news.util;
 
-public interface NewsConstatns {
+public interface NewsConstants {
 	
 	public static final int DEFAULT_LENGTH = 10;
 	
