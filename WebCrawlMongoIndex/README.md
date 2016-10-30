@@ -97,3 +97,14 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
   
   3. Apache Nutch follows the robots.txt exclusion standard.
   
+  
+  For the Second part of the problem, which is to create search API, 
+  
+## Future Implementation Plan
+
+  1. Currently I am using the html-parser plugin for parsing the text from crawled webpage available in Nutch. It doesn't aloow me to parse specific tags related to the webpage. I want to create a custom parser plugin which will help me to parse specific html tags with css.
+  
+  2. I am not usig spring boot and spring data for the search API as of now. I want to remove the current DAO implemntaion by Spring boot and spring data for mongodb. This will also help in creating more search options.
+  
+  3. A part of the problem was to deploy the solution as a public API using an Amazon EC2 instance. I am not able to complete id as of now, but want to complete it as early as possible.
+  
