@@ -92,4 +92,8 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
 ## Challenges and Sollutions.
 
   1. Initially, I wanted to use mongodb as crawldb, but gora-mongodb had an onder version of mongo-java-driver. Then I decided to use Cassandra as crawldb but there is an [unresolved issue](https://issues.apache.org/jira/browse/GORA-416) in gora-cassandra which was failing while fetching. Finally I decided to use HBase as crawldb.
-  2. 
+  
+  2. Apache Nutch didn't have an in built plugin for mongobd as indexer, hence I had to write my own. [Here](https://github.com/ApurbaPandey/WebCrawlMongoIndex/tree/master/WebCrawlMongoIndex/Nutch-plugins) is the implementation for the same.
+  
+  3. Apache Nutch follows the robots.txt exclusion standard.
+  
