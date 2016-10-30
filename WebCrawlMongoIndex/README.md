@@ -88,3 +88,8 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
   6. Parse fetched URLs `bin/nutch parse -all -crawlId 97`
   7. Update database from parsed URLs `bin/nutch updatedb -all -crawlId 97`
   8. And Finally Index parsed URLs `bin/nutch index -all -crawlId 97`
+  
+## Challenges and Sollutions.
+
+  1. Initially, I wanted to use mongodb as crawldb, but gora-mongodb had an onder version of mongo-java-driver. Then I decided to use Cassandra as crawldb but there is an [unresolved issue](https://issues.apache.org/jira/browse/GORA-416) in gora-cassandra which was failing while fetching. Finally I decided to use HBase as crawldb.
+  2. 
