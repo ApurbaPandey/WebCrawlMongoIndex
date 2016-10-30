@@ -14,7 +14,8 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
 ### Installing and building Nutch
 
   1. Download latest Nutch from [here](http://nutch.apache.org/downloads.html) and extract. Set `export NUTCH_HOME=$(pwd)`
-  2. Edit $NUTCH_HOME/conf/nutch-site.xml to add 
+  2. Edit $NUTCH_HOME/conf/nutch-site.xml to add:
+  
   ```
   <property>
     <name>storage.data.store.class</name>
