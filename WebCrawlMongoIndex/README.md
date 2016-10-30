@@ -66,3 +66,10 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
     <value>articles</value>
   </property>
   ```
+  7. Finally we compile and build nutch `ant runtime`
+  8. Verify the build.
+  
+  ```
+  cd runtime/local
+  bin/nutch
+  ```
