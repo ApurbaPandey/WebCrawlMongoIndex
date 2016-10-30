@@ -46,7 +46,7 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
     <value>protocol-(http|httpclient)|urlfilter-regex|index-(basic|more)|query-(basic|site|url|lang)|indexer-mongo|nutch-extensionpoints|parse-(text|html|msexcel|msword|mspowerpoint|pdf)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|parse-(html|tika|metatags)|index-(basic|anchor|more|metadata)</value>
   </property>
   ```
-  6. Unfortunately, Apache Nutch didn't have any indexer plugin for mongo, so I have to write my own. You can find the source code and instraction to add in nutch [here](https://github.com/ApurbaPandey/WebCrawlMongoIndex/tree/master/WebCrawlMongoIndex). We have to add the mongo connection parameteres to $NUTCH_HOME/conf/nutch-site.xml:
+  6. Unfortunately, Apache Nutch didn't have any indexer plugin for mongo, so I have to write my own. You can find the source code and instraction to add in nutch [here](https://github.com/ApurbaPandey/WebCrawlMongoIndex/tree/master/WebCrawlMongoIndex/Nutch-plugins). We have to add the mongo connection parameteres to $NUTCH_HOME/conf/nutch-site.xml:
   
   ```
   <property>
