@@ -73,3 +73,13 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
   cd runtime/local
   bin/nutch
   ```
+## Crawling and Storing 
+
+  1. create urls/seeds.txt file and add the list of websites you want to crawl. 
+  
+  ```
+  mkdir urls
+  echo 'http://www.example.com' > urls/seeds.txt
+  ```
+  2. Edit the file conf/regex-urlfilter.txt and replace `+.` at the end of the file to `+^http://([a-z0-9]*\.)*example.com/` if you want to crawl only from one website.
+  
