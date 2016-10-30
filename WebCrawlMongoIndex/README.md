@@ -82,4 +82,9 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
   echo 'http://www.example.com' > urls/seeds.txt
   ```
   2. Edit the file conf/regex-urlfilter.txt and replace `+.` at the end of the file to `+^http://([a-z0-9]*\.)*example.com/` if you want to crawl only from one website.
-  
+  3. Initialize the crawldb `bin/nutch inject urls/seed.txt -crawlId 97`
+  4. Generate URLs from crawldb `bin/nutch generate -topN 100 -crawlId 97`
+  5. Fetch generated URLs `bin/nutch fetch -all -crawlId 97`
+  6. Parse fetched URLs `bin/nutch parse -all -crawlId 97`
+  7. Update database from parsed URLs `bin/nutch updatedb -all -crawlId 97`
+  8. And Finally Index parsed URLs `bin/nutch index -all -crawlId 97`
