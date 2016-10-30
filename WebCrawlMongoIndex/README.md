@@ -23,3 +23,11 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
     <description>Default class for storing data</description>
   </property>
   ```
+  3. Ensure the MongoDB gora-hbase dependency is available in $NUTCH_HOME/ivy/ivy.xml; Uncomment the below line from the file:
+  ```
+  <dependency org="org.apache.gora" name="gora-hbase" rev="0.6.1" conf="*->default" />
+  ```
+  Also add hbase-common
+  ```
+  <dependency org="org.apache.hbase" name="hbase-common" rev="0.98.8-hadoop2" conf="*->default" />
+  ```
