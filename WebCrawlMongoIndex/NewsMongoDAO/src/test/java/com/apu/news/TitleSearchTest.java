@@ -21,14 +21,14 @@ public class TitleSearchTest {
 	@Before
 	public void setup() throws ConfigurationException{
 		
-		articles = DAOFactory.getMongoCollection("nutchresults", "articles");
+		articles = DAOFactory.getMongoCollection("nutchcrawl", "articles");
 	}
 	
 	@Test
 	public void searchArticleTest(){
 		
 		TitleSearchDAO dao = new TitleSearchDAO();
-		List<Document> resp = dao.searchTitle("", 1, articles );
+		List<Document> resp = dao.searchTitle("Bus", 1, articles );
 		
 		Assert.assertEquals(resp.size(), 1);
 		

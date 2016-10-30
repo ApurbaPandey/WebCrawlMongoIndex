@@ -21,7 +21,7 @@ MongoCollection<Document> articles;
 	@Before
 	public void setup() throws ConfigurationException{
 		
-		articles = DAOFactory.getMongoCollection("nutchresults", "articles");
+		articles = DAOFactory.getMongoCollection("nutchcrawl", "articles");
 	}
 	
 	@Test

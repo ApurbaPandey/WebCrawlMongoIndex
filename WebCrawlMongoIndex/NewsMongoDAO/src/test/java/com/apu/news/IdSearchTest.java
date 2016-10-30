@@ -20,7 +20,7 @@ public class IdSearchTest {
 	@Before
 	public void setup() throws ConfigurationException{
 		
-		articles = DAOFactory.getMongoCollection("nutchresults", "articles");
+		articles = DAOFactory.getMongoCollection("nutchcrawl", "articles");
 	}
 	
 	@Test
@@ -36,7 +36,7 @@ public class IdSearchTest {
 		String id = respDoc.getString("_id");
 		String title = respDoc.getString("title");
 		
-		Document getByTitleResp = dao.getById(title, articles);
+		Document getByTitleResp = dao.getById(id, articles);
 		
 		Assert.assertEquals(getByTitleResp.get("_id"), id);
 		Assert.assertEquals(getByTitleResp.get("title"), title);

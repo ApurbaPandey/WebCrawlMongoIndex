@@ -32,7 +32,7 @@ public class TitleSearchDAO {
 		
 		Document search = new Document().append("$search", title);
 		Document txtSearch = new Document().append("$text", search);
-		
+		logger.info("searchTitle : Query = "+txtSearch.toJson());
 		MongoCursor<Document> searchResults = collection.find(txtSearch).limit(limit).iterator();
 		
 		List<Document> articles = new ArrayList<Document>();
