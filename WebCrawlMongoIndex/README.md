@@ -98,7 +98,7 @@ For Web Crawling, I have chosen [Apache Nuth](http://nutch.apache.org/). Apache 
   3. Apache Nutch follows the robots.txt exclusion standard.
   
   
-  For the Second part of the problem, which is to create search API, I planned to use spring boot with spring data for mongodb. But I found out that there is an [issue with mongo](https://jira.mongodb.org/browse/JAVA-2229) which wis fixed in upcoming version of mongo-java-driver. Because of this issue, Mongodb Authentication with SSL was failing and I needed SSL authentication to connect my mongodb. Hence, I decided to create simple DAO with singletone. The reson I went for singletone is, MongoClient is thread-safe and has its own connetion pooling mechanism.
+  For the Second part of the problem, which is to create search API, I planned to use spring boot with spring data for mongodb. But I found out that there is an [issue with mongo](https://jira.mongodb.org/browse/JAVA-2229) which is fixed in upcoming version of mongo-java-driver. Because of this issue, Mongodb Authentication with SSL was failing and I needed SSL authentication to connect my mongodb. Hence, I decided to create simple DAO with singletone. The reson I went for singletone is, MongoClient is thread-safe and has its own connetion pooling mechanism.
   
   The title field of the mongoDB collection article is an indexed field, hence we can do a text search on this. Except title currently search is available only id and date fields. I am currently working on providing more search features.
   
